@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing — Constellation OS</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+{% include header.html %}
+
+<main>
+
+<h1>Pricing</h1>
+
+<p>Pricing details for Constellation OS will be available soon.</p>
+<p>We are currently establishing the best structure to support micro‑manufacturing studios, production facilities, and R&D environments.</p>
+
+<p>Please check back later or <a href="/pages/contact.html">contact us</a> for early access information.</p>
+
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>
 
