@@ -65,6 +65,87 @@ a:hover {
 }
 
 /* --------------------------------------------------
+   MOBILE NAVIGATION
+-------------------------------------------------- */
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #4CC9F0;
+    height: 3px;
+    width: 28px;
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle-label span::before {
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px;
+}
+
+/* Mobile Menu Hidden by Default */
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #05070D;
+        padding: 20px;
+        border-top: 1px solid #0A0F1C;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    /* When checkbox is checked, show menu */
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Animate hamburger into X */
+    .nav-toggle:checked + .nav-toggle-label span {
+        background: transparent;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+}
+
+/* --------------------------------------------------
    HERO SECTION (Homepage Only)
 -------------------------------------------------- */
 .hero {
